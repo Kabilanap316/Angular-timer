@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="text-center">{{ formatTime(timerValue) }}</h1>
+        <div class="text-center">
+          <div class="btn-group">
+            <button class="btn btn-primary" (click)="startTimer()">Start</button>
+            <button class="btn btn-danger" (click)="stopTimer()">Stop</button>
+            <button class="btn btn-success" (click)="resumeTimer()">Resume</button>
+            <button class="btn btn-warning" (click)="resetTimer()">Reset</button>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <label for="initialTime">Set Initial Time (seconds):</label>
+          <input type="number" class="form-control" id="initialTime" [(ngModel)]="timerValue">
+        </div>
+      </div>
+    </div>
+  </div>
+  
